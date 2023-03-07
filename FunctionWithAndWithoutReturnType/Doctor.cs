@@ -15,6 +15,7 @@ namespace FunctionWithAndWithoutReturnType
         public int IncomeTax { get; set; }
         public int NetIncome { get; set; }
 
+        
         //non value returning  function 
         public void GetData()
         {
@@ -48,8 +49,30 @@ namespace FunctionWithAndWithoutReturnType
         //value returning method
         public int CalculateNetIncome()
         {
-            int result = GrossIncome - IncomeTax;
-            return result;
+            //int result = GrossIncome - IncomeTax;
+            //return result;
+
+            NetIncome = GrossIncome - IncomeTax;
+            return NetIncome;
         }
+        
+
+        // type casting demo
+
+        public string strId { get; set; }
+        public char charId  { get;set; }
+
+        public static void typecasting()
+        {
+            Doctor doctor = new Doctor();
+
+            doctor.strId = "20";
+            doctor.Id = Convert.ToInt32(Console.ReadLine());//explicit  type casting
+
+            doctor.charId = 'b';
+            doctor.Id = doctor.charId;//Implicit Type casting
+            
+        }
+
     }
 }

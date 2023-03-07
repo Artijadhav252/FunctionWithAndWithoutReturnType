@@ -13,6 +13,8 @@ public class  program
         Console.WriteLine("please enter doctor2 object");
         doctor2.GetData();
         doctor2.PutData();
+
+        Doctor.typecasting();
     }
 
 }
