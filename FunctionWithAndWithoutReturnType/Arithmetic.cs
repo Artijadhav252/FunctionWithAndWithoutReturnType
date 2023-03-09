@@ -17,21 +17,7 @@ namespace FunctionWithAndWithoutReturnType
             int result = num1 + num2;
             Console.WriteLine($"addition of{num1}and {num2} is = {result}");
         }
-        //public void sub(int num1,int num2)
-        //{
-        //    int result = num1 - num2;
-        //    Console.WriteLine($"Substraction of {num1} and {num2} is={result}");
-        //}
-        //public void mul(int num1, int num2)
-        //{
-        //    int result = num1 * num2;
-        //    Console.WriteLine($"Multiplication of {num1} and {num2} is ={result}");
-        //}
-        //public void div(int num1, int num2) 
-        //{
-        //     int result = num1 / num2;
-        //    Console.WriteLine($"Division of {num1} AND {num2} is = {result}");
-        //}
+       
 
         //Complex argument or parameters
         public void add(Arithmetic arth)
@@ -40,31 +26,45 @@ namespace FunctionWithAndWithoutReturnType
             Console.WriteLine($"Assition of{arth.A} Ans {arth.B} IS = {result}");
         }
 
-        //public void sub(Arithmetic arth)
-        //{
-        //    int result=arth.A- arth.B;
-        //    Console.WriteLine($"Substraction of {arth.A} and {arth.B} is = {result}");
-        //}
+        
 
-        //public void mul(Arithmetic arth)
-        //{
-        //    int result = arth.A * arth.B;
-        //    Console.WriteLine($"Multiplication of {arth.A} and {arth.B} is= {result}");
-        //}
+        //FRORMAL PARAMETERS
 
-        //public void div(Arithmetic arth)
-        //{
-        //    int result = arth.A / arth.B;
-        //    Console.WriteLine($"Division of {arth.A} And {arth.B} is = {result}");
-        //}
-
-        //output parameter
-        public void Add(int num1,int num2,out int result)
+       
+        public void Add(int num1,int num2,out int result) //output parameter
         {
             result = num1 + num2;
         }
-       
 
-    }   
+        
+        public void sub(int num1, int num2, ref int result1)//input output parameters
+        {
+            result1 =result1 +  num1 - num2;
+        }
+
+
+        public int Mod(int num1,int num2)
+        {
+            int result = num1 % num2;
+            return result;
+        }
+
+        public int ArithmeticOperation(int a,int b,
+                                                  out int substractionalresult,
+                                                   out int multiplicationalresult,
+                                                   out int divisionalresult,
+                                                   out int modresult)
+        {
+            int additionresult = a + b;
+             substractionalresult = a - b;
+             multiplicationalresult = a * b;
+             divisionalresult = a / b;
+             modresult = a % b;
+
+
+            return additionresult;
+        }
+
+    }
 
 }

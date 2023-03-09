@@ -4,40 +4,73 @@ public class  Program
 {
     public static void Main()
     {
+        //Arithmetic arithmetic = new Arithmetic();
+        //arithmetic.add(10, 20);
+
+
+
+
+        Arithmetic arithmetic1 = new Arithmetic();
+        arithmetic1.A = 40;
+        arithmetic1.B = 20;
+
         Arithmetic arithmetic = new Arithmetic();
         arithmetic.add(10, 20);
-
-        //Arithmetic arithmetic1 = new Arithmetic();  
-        //arithmetic1.sub(30, 20);
-
-        //Arithmetic arithmetic2 = new Arithmetic();
-        //arithmetic2.mul(3, 2);
-
-
-        //Arithmetic arithmetic3 = new Arithmetic();
-        //arithmetic3.div(20, 2);
-
-
-        //Arithmetic arithmetic1 = new Arithmetic();
-        //arithmetic1.A = 40;
-        //arithmetic1.B = 20;
-
-        //Arithmetic arithmetic2 =  new Arithmetic();
-        //arithmetic2.add(arithmetic1);
-
-        //Arithmetic arithmetic3=new Arithmetic();    
-        //arithmetic3.sub(arithmetic1);
-
-        //Arithmetic arithmetic4 = new Arithmetic();
-        //arithmetic4.mul(arithmetic1);
-
-        //Arithmetic arithmetic5= new Arithmetic();
-        //arithmetic5.div(arithmetic1);
-
-        arithmetic.add(10, 20);
         int result;
-        arithmetic.Add(10, 20,out result);
+
+        //Actual parameters
+        arithmetic.Add(10, 20,out   result);
         Console.WriteLine($"Multiplication of 10 and 20 is ={result}");
+
+        int result1 = 10;
+        arithmetic.sub(30,20 ,ref  result1);
+        Console.WriteLine($"result={result1}");
+
+
+
+        int moderesult=arithmetic.Mod(10 ,2);
+
+
+        int additionresult = arithmetic.ArithmeticOperation(20, 19, out int subsCtractionalresult,
+                                                         out int multiplicationalresult,
+                                                         out int divisionalresult,
+                                                         out int modresult);
+
+        
+       
+        Console.WriteLine($"Addition={additionresult},Substraction ={subsCtractionalresult}"
+            +$"multiplicationalresult ={multiplicationalresult}, divisionalresult ={divisionalresult},Mod ={modresult}");
+
+
+        int num1 = 10;
+        int num2 = 20;
+
+        //Call by value
+        callByValueCallByReference CallByValueCallByReference = new callByValueCallByReference();
+
+        Console.WriteLine("Call by value Before calling the function");
+        Console.WriteLine($"Number1={num1}, Number2={num2}");
+
+
+
+        CallByValueCallByReference.CallByValue(num1, num2);
+
+        Console.WriteLine("Call by value After calling the function");
+        Console.WriteLine($"Number1={num1}, Number2={num2}");
+
+        //call by reference
+
+        Console.WriteLine("Call by reference Before calling the function");
+        Console.WriteLine($"Number1={num1}, Number2={num2}");
+
+
+
+        CallByValueCallByReference.CallByReference(ref num1,ref num2);
+
+        Console.WriteLine("Call by reference After calling the function");
+        Console.WriteLine($"Number1={num1}, Number2={num2}");
+
+
 
 
         //Doctor doctor1 = new Doctor();
